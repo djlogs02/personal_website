@@ -1,0 +1,10 @@
+\bin
+\obj
+*.suo
+\.vs
+*.bak
+*.user
+\packages
+*.yml
+web.release.config
+*.csproj.user

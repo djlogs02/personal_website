@@ -1,0 +1,44 @@
+﻿@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
+    {
+        Layout = (string)parentLayout;
+    }
+    else
+    {
+        Layout = "/Areas/Identity/Pages/_Layout.cshtml";
+    }
+}
+<section name="css">
+    <link href="~/css/clean-blog-overrides.css" rel="stylesheet" />
+</section>
+<!-- Page Header -->
+<header class="masthead2">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h2>Manage your account</h2>
+                    <h4>Change your account settings</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div>
+    
+    <hr />
+    <div class="row">
+        <div class="col-md-3">
+            <partial name="_ManageNav" />
+        </div>
+        <div class="col-md-9">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}
