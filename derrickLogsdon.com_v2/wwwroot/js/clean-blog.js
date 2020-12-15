@@ -25,9 +25,11 @@
         if (currentTop < this.previousTop) {
           //if scrolling up...
           if (currentTop > 0 && $('#mainNav').hasClass('is-fixed')) {
-            $('#mainNav').addClass('is-visible');
+              $('#mainNav').addClass('is-visible');
+              $('#mainLogo').attr("src", '/img/logo_dark.png');
           } else {
-            $('#mainNav').removeClass('is-visible is-fixed');
+              $('#mainNav').removeClass('is-visible is-fixed');
+              $('#mainLogo').attr("src", '/img/logo_light.png');
           }
         } else if (currentTop > this.previousTop) {
           //if scrolling down...
